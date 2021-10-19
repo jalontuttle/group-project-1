@@ -39,9 +39,23 @@
 
       <section class="filterEl">
         <div class="list-group d-inline-flex">
-            <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
-              Flight Map
-            </button>
+          <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Flight Map
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  <p>Enter your flight number:</p>
+                  <input type="text" name="" id="flight-search">
+                  <input id="search-btn" type="button" value="search">
+                </div>
+              </div>
+            </div>
             <button type="button" class="list-group-item list-group-item-action">Arrivals</button>
             <button type="button" class="list-group-item list-group-item-action">Departures</button>
             <button type="button" class="list-group-item list-group-item-action">By Zip</button>
@@ -53,7 +67,7 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js""></script>
-    <script src=" ./assets/script.js"></script>
+    <script src="./assets/script.js"></script>
 
 
 </body>
