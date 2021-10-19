@@ -1,4 +1,10 @@
-#navParentEl {
-    position: relative;
-    top: 25px;
-}
+.jumbotron {
+    text-align: center;
+    border-radius: 0;
+    border-bottom: 4px solid grey
+  }
+  .jumbotron:hover{
+      background-image: url(https://jooinn.com/images/blue-sky-with-clouds-8.jpg);
+      height: auto;
+      width: auto;
+  }
