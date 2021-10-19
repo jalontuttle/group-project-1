@@ -3,8 +3,29 @@
     border-radius: 0;
     border-bottom: 4px solid grey
   }
-  .jumbotron:hover{
+  .jumbotron:hover {
       background-image: url(https://jooinn.com/images/blue-sky-with-clouds-8.jpg);
       height: auto;
       width: auto;
   }
+
+  /* Long Search Bar (Frequently Searched Cities) */
+  .navbar-expand-lg {
+  border-radius: 10px;
+  border-color: #a3cefb;
+  border: 5px;
+}
+
+
+  .list-group {
+    margin-left: 30px;
+    background-color: #e9ecef;
+  }
+
+  .list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: #46afff;
+    border-color: #a3cefb;
+}
+
