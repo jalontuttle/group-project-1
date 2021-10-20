@@ -44,3 +44,16 @@
 .card-forecast{
   margin-right: 10px;
 }
+
+.row{
+justify-content: space-evenly;
+}
+
+#image{
+  justify-content: center;
+}
+
+#search-btn, #flight-search{
+  margin-top: .35rem;
+}
+

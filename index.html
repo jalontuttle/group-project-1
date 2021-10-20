@@ -32,23 +32,24 @@
           </div>
           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body">
-              <p>Enter your destination</p>
-              <input type="text" id="city-search">
-              <p>Enter your flight number:</p>
-              <input type="text" name="" id="flight-search">
+              <!-- <p>Enter your destination</p> -->
+              <input type="text" id="city-search" onfocus="this.value=''" value="Destination">
+              <!-- <p>Enter your flight number:</p> -->
+              <input type="text" name="" id="flight-search" onfocus="this.value=''" value="Flight Number">
               <input id="search-btn" type="button" value="search">
             </div>
           </div>
         </div>
       </div>
-      <button type="button" class="list-group-item list-group-item-action">Arrivals</button>
+      <!-- <button type="button" class="list-group-item list-group-item-action">Arrivals</button>
       <button type="button" class="list-group-item list-group-item-action">Departures</button>
-      <button type="button" class="list-group-item list-group-item-action">By Zip</button>
+      <button type="button" class="list-group-item list-group-item-action">By Zip</button> -->
     </div>
   </div>
 
   <div class="col-8 map-container">
-    <img id="image">
+    <img id="image" class="img-fluid">
+    
   </div>
 
   <br>
