@@ -1,6 +1,6 @@
 var searchBtn = $("#search-btn");
 var flightNum = $("#flight-search");
-
+var city = $("#city-search");
 
 function getFlightMap(event){
     event.preventDefault()
@@ -19,8 +19,15 @@ function getFlightMap(event){
     })
 }
 
+function getForecast(event){
+    event.preventDefault();
+    console.log(city.val());
+}
+
+
 
 
 
 
 searchBtn.on("click", getFlightMap);
+searchBtn.on("click", getForecast);

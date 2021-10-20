@@ -15,30 +15,11 @@
     <div class="container">
       <h1 class="display-4">Air Travel Information</h1>
       <p class="lead">Flight infotaiment at your fingertips!</p>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">Frequently Searched Cities</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#"></a>
-                <a class="dropdown-item" href="#"></a>
-                <a class="dropdown-item" href="#"></a>
-              </div>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
     </div>
   </header>
 
-  <section class="filterEl">
-    <div class="list-group d-inline-flex">
+  <div class="container">
+    <div class="col-3 list-group">
       <div class="accordion" id="accordionExample">
         <div class="card">
           <div class="card-header" id="headingOne">
@@ -51,25 +32,87 @@
           </div>
           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body">
+              <p>Enter your destination</p>
+              <input type="text" id="city-search">
               <p>Enter your flight number:</p>
               <input type="text" name="" id="flight-search">
               <input id="search-btn" type="button" value="search">
             </div>
           </div>
         </div>
-        <button type="button" class="list-group-item list-group-item-action">Arrivals</button>
-        <button type="button" class="list-group-item list-group-item-action">Departures</button>
-        <button type="button" class="list-group-item list-group-item-action">By Zip</button>
-        <button type="button" class="list-group-item list-group-item-action" disabled>A disabled button item</button>
       </div>
+      <button type="button" class="list-group-item list-group-item-action">Arrivals</button>
+      <button type="button" class="list-group-item list-group-item-action">Departures</button>
+      <button type="button" class="list-group-item list-group-item-action">By Zip</button>
+    </div>
+  </div>
+
+  <div class="col-9 map-container">
+    <img id="image">
+  </div>
+
+<div class="container-forecast">
+  <div class="row forecast">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <p id="date1"></p>
+        <p id="icon1"></p>
+        <p id="temp1"></p>
+        <p id="wind1"></p>
+        <p id="humidity1"></p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <p id="date2"></p>
+        <p id="icon2"></p>
+        <p id="temp2"></p>
+        <p id="wind2"></p>
+        <p id="humidity2"></p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <p id="date3"></p>
+        <p id="icon3"></p>
+        <p id="temp3"></p>
+        <p id="wind3"></p>
+        <p id="humidity3"></p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <p id="date4"></p>
+        <p id="icon4"></p>
+        <p id="temp4"></p>
+        <p id="wind4"></p>
+        <p id="humidity4"></p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <p id="date5"></p>
+        <p id="icon5"></p>
+        <p id="temp5"></p>
+        <p id="wind5"></p>
+        <p id="humidity5"></p>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 
 
-  </section>
+
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js""></script>
-    <script src=" ./assets/script.js"></script>
+  <script src=" ./assets/script.js"></script>
 
 
 </body>
