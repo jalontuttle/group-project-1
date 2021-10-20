@@ -1,6 +1,8 @@
 var searchBtn = $("#search-btn");
 var flightNum = $("#flight-search");
 var city = $("#city-search");
+var searchHistory = localStorage.getItem(city.val());
+
 
 // Flight function
 function getFlightMap(event){
@@ -96,8 +98,11 @@ function getForecast(event){
         })
 };
 
+function addStorage() {
+    localStorage.setItem("city", city.val)
+}
 
-
+searchBtn.on("click", addStorage);
 searchBtn.on("click", getFlightMap);
 searchBtn.on("click", getForecast);
 

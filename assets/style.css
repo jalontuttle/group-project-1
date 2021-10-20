@@ -1,3 +1,8 @@
+:root {
+  color: whitesmoke;
+}
+
+
 .jumbotron {
   background-image: url(https://jooinn.com/images/blue-sky-with-clouds-8.jpg);
   text-align: center;
@@ -5,8 +10,12 @@
   border-bottom: 4px solid grey
 }
 
+.lead {
+  font-family: 'DM Serif Display', serif;
+ }
+
 .jumbotron:hover {
-  background-image: none;
+  background-image: url(https://wallpapers-hd-wide.com/wp-content/uploads/2016/01/Large_passenger_airplane_flying_in_the_sky-1920x1080.jpg);
   height: auto;
   width: auto;
 }
@@ -51,6 +60,8 @@ justify-content: space-evenly;
 
 #image{
   justify-content: center;
+  border-radius: 1rem;
+  
 }
 
 #search-btn, #flight-search{
