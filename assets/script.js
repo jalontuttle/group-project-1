@@ -99,11 +99,10 @@ function getForecast(event){
 };
 
 function addStorage() {
-    localStorage.setItem("city", city.val)
-}
+    localStorage.setItem("city", city.val());
+};
 
-searchBtn.on("click", addStorage);
 searchBtn.on("click", getFlightMap);
 searchBtn.on("click", getForecast);
-
+searchBtn.on("click", addStorage);
 
