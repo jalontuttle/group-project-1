@@ -1,8 +1,8 @@
 var searchBtn = $("#search-btn");
 var flightNum = $("#flight-search");
 var city = $("#city-search");
-var localStorageGrab = JSON.parse(localStorage.getItem('cityList')) || [];
-
+var localStorageGrab = JSON.parse(localStorage.getItem("Destination")) || [];
+console.log("LS array", localStorageGrab);
 // Flight function
 function getFlightMap(event){
     event.preventDefault()
@@ -95,15 +95,49 @@ function getForecast(event){
         wind5.text("Wind: " + data.list[4].wind.speed);
         humidity5.text("Humidity: " + data.list[4].main.humidity);
         })
+        cityLoop();
 };
+// Is this function [below] necessary if it is calling a function already defined?
+// Why not call function w/in a larger function?
 
-function addStorage(event) {
-    event.preventDefault();
-    
-    localStorage.setItem("city", );
-};
+
+// function addStorage(event) {
+//     // event.preventDefault();
+// };
 
 searchBtn.on("click", getFlightMap);
 searchBtn.on("click", getForecast);
-searchBtn.on("click", addStorage);
+// searchBtn.on("click", addStorage);
 
+// var localStorageGrab = JSON.parse(localStorage.getItem('cityList')) || [];
+// console.log("LS array", localStorageGrab);
+
+//Render the City List buttons 
+function cityLoop() {
+    console.log("Previous searched cities", localStorageGrab.length);
+    var divElement = document.getElementById("city-search");
+    var counter = 0;
+    //reset the div 
+    divElement.innerHTML = '';
+
+
+    if (localStorageGrab.length <= 5) {
+
+        counter = localStorageGrab.length;
+    } else {
+        //in case array length is > than 5 set the counter MAX value as 5 
+        counter = 5;
+    }
+
+    //loop to run max 5 times or lesser depending on the array values 
+    for (i = 0; i < counter; i++) {
+        //grabs each index from an arra
+        var arrElement = localStorageGrab[i];
+        console.log("City is ", arrElement);
+    }
+    
+}
+
+
+//Page load 
+cityLoop();
