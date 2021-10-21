@@ -11,7 +11,7 @@ View the AirBender Group Project at: https://jalontuttle.github.io/group-project
 
 ## Description
 
-AirBender is a website that was created to provide a modern day solution of giving a family member the ability to check the status of their loved one. By having small information like the flight number the family member can check the flight path of their loved one, in addition they can check the weather for week so that as the loved one arrives you can make necessary plans. This will eleviate the need for going to multiple websites in order to track and check this information. Welcome to the AirBender Experience.
+AirBender is a website that was created to provide a modern day solution of giving a family member the ability to check the status of their loved one. By having small information like the flight number the family member can check the flight path of their loved one, in addition they can check the weather for week so that as the loved one arrives you can make necessary plans. This will alleviate the need for going to multiple websites in order to track and check this information. Welcome to the AirBender Experience.
 
 
 ## Technologies
