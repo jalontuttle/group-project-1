@@ -7,7 +7,7 @@ View the AirBender Group Project at: https://jalontuttle.github.io/group-project
 1. [Description](#Description)
 2. [Technologies](#technologies)
 3. [Requirements](#Requirements)
-4. [Presentation] (#Presentation)
+4. [Presentation](#Presentation)
 
 
 ## Description
