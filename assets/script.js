@@ -1,14 +1,13 @@
 var searchBtn = $("#search-btn");
 var flightNum = $("#flight-search");
 var city = $("#city-search");
-var searchHistory = localStorage.getItem(city.val());
-
+var localStorageGrab = JSON.parse(localStorage.getItem('cityList')) || [];
 
 // Flight function
 function getFlightMap(event){
     event.preventDefault()
     console.log(flightNum.val());
-    var requestUrl = "http://flightxml.flightaware.com/json/FlightXML2/MapFlight?ident=" + flightNum.val()
+    var requestUrl = "https://flightxml.flightaware.com/json/FlightXML2/MapFlight?ident=" + flightNum.val()
 
     $.ajax({
     url: requestUrl,
@@ -98,8 +97,10 @@ function getForecast(event){
         })
 };
 
-function addStorage() {
-    localStorage.setItem("city", city.val());
+function addStorage(event) {
+    event.preventDefault();
+    
+    localStorage.setItem("city", );
 };
 
 searchBtn.on("click", getFlightMap);
