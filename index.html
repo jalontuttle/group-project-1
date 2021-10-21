@@ -23,7 +23,7 @@
   </header>
 
   <div class="container">
-    <div class="col-3 list-group">
+    <div class="col-3 list-group" id="search-form">
       <div class="accordion" id="accordionExample">
         <div class="card">
           <div class="card-header" id="headingOne">
@@ -39,9 +39,10 @@
               <!-- <p>Enter your destination</p> -->
               <input type="text" id="city-search" onfocus="this.value=''" value="" placeholder="Destination">
               <!-- <p>Enter your flight number:</p> -->
-              <input type="text" name="" id="flight-search" onfocus="this.value=''" value="Flight Number">
+              <input type="text" name="" id="flight-search" onfocus="this.value=''" value="">
               <input id="search-btn" type="button" value="Search">
             </div>
+            <div id="cities-buttons"></div>
           </div>
         </div>
       </div>

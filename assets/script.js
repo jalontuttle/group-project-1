@@ -1,16 +1,9 @@
 var searchBtn = $("#search-btn");
 var flightNum = $("#flight-search");
 var city = $("#city-search");
-<<<<<<< HEAD
-var localStorageGrab = JSON.parse(localStorage.getItem(city.val())) || [];
-console.log("LS array", localStorageGrab);
-
-=======
+var cityBtn = $("#cities-buttons")
 var cityArray = [];
 
-// var localStorageGrab = JSON.parse(localStorage.getItem(city)) || [];
-// console.log("LS array", localStorageGrab);
->>>>>>> 3c88e5ff47d6d354929c49c640f0d7257e41caa0
 // Flight function
 function getFlightMap(event){
     event.preventDefault()
@@ -103,63 +96,54 @@ function getForecast(event){
         wind5.text("Wind: " + data.list[4].wind.speed);
         humidity5.text("Humidity: " + data.list[4].main.humidity);
         })
-        cityLoop();
 };
 
-
+cityBtn.on("click", getForecast);
 searchBtn.on("click", getFlightMap);
 searchBtn.on("click", getForecast);
-// searchBtn.on("click", addStorage);
 
-// var localStorageGrab = JSON.parse(localStorage.getItem('cityList')) || [];
-// console.log("LS array", localStorageGrab);
-
-//Render the City List buttons 
-function cityLoop() {
-
-    cityArray = JSON.parse(localStorage.getItem('cities')) || [];
-    console.log("LS array", cityArray);
-    console.log("Previous searched cities", cityArray.length);
-    var divElement = document.getElementById("city-search");
-    console.log(city.val());
-    cityArray.push(city.val());
-    console.log(cityArray);
-    var counter = 0;
-    //reset the div 
-    divElement.innerHTML = '';
-
-
-    // if (localStorageGrab.length <= 5) {
-
-    //     counter = localStorageGrab.length;
-    // } else {
-    //     //in case array length is > than 5 set the counter MAX value as 5 
-    //     counter = 5;
-    // }
-
-<<<<<<< HEAD
-    //loop to run max 5 times or lesser depending on the array values 
-    for (i = 0; i < counter; i++) {
-        //grabs each index from an arra
-        var arrElement = localStorageGrab[i];
-        console.log("City is ", arrElement);
-    }
-    localStorage.setItem("city", city.val());
-=======
-    // //loop to run max 5 times or lesser depending on the array values 
-    // for (i = 0; i < counter; i++) {
-    //     //grabs each index from an arra
-    //     var arrElement = localStorageGrab[i];
-    //     console.log("City is ", arrElement);
-    // }
+//Set local storage
+function renderCities(){
+    cityBtn.innerhtml = "";
     
->>>>>>> 3c88e5ff47d6d354929c49c640f0d7257e41caa0
+    for(var i = 0; i < cityArray.length; i++){
+        var btn = cityArray[i];
+
+        var li = document.createElement("button");
+        li.textContent = btn
+        li.setAttribute("data-index", i);
+
+        cityBtn.append(li);
+    }
 }
 
-function storeCities()
-{
-    localStorage.setItem("todos", JSON.stringify(ci));
+function init(){
+    var storedCities = JSON.parse(localStorage.getItem("cities"));
+
+    if(storedCities !== null){
+        cityArray = storedCities
+    }
+
+    renderCities();
 }
 
-//Page load 
-cityLoop();
+function storeCities(){
+  localStorage.setItem("cities", JSON.stringify(cityArray));  
+}
+
+searchBtn.on("click", function(event){
+    event.preventDefault();
+
+    var cityText = city.val();
+
+    if(cityText === ""){
+        return;
+    }
+    cityArray.push(cityText);
+
+    storeCities();
+    renderCities();
+})
+
+init();
+   
