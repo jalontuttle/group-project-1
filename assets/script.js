@@ -1,8 +1,10 @@
 var searchBtn = $("#search-btn");
 var flightNum = $("#flight-search");
 var city = $("#city-search");
-var localStorageGrab = JSON.parse(localStorage.getItem("Destination")) || [];
-console.log("LS array", localStorageGrab);
+var cityArray = [];
+
+// var localStorageGrab = JSON.parse(localStorage.getItem(city)) || [];
+// console.log("LS array", localStorageGrab);
 // Flight function
 function getFlightMap(event){
     event.preventDefault()
@@ -114,30 +116,40 @@ searchBtn.on("click", getForecast);
 
 //Render the City List buttons 
 function cityLoop() {
-    console.log("Previous searched cities", localStorageGrab.length);
+
+    cityArray = JSON.parse(localStorage.getItem('cities')) || [];
+    console.log("LS array", cityArray);
+    console.log("Previous searched cities", cityArray.length);
     var divElement = document.getElementById("city-search");
+    console.log(city.val());
+    cityArray.push(city.val());
+    console.log(cityArray);
     var counter = 0;
     //reset the div 
     divElement.innerHTML = '';
 
 
-    if (localStorageGrab.length <= 5) {
+    // if (localStorageGrab.length <= 5) {
 
-        counter = localStorageGrab.length;
-    } else {
-        //in case array length is > than 5 set the counter MAX value as 5 
-        counter = 5;
-    }
+    //     counter = localStorageGrab.length;
+    // } else {
+    //     //in case array length is > than 5 set the counter MAX value as 5 
+    //     counter = 5;
+    // }
 
-    //loop to run max 5 times or lesser depending on the array values 
-    for (i = 0; i < counter; i++) {
-        //grabs each index from an arra
-        var arrElement = localStorageGrab[i];
-        console.log("City is ", arrElement);
-    }
+    // //loop to run max 5 times or lesser depending on the array values 
+    // for (i = 0; i < counter; i++) {
+    //     //grabs each index from an arra
+    //     var arrElement = localStorageGrab[i];
+    //     console.log("City is ", arrElement);
+    // }
     
 }
 
+function storeCities()
+{
+    localStorage.setItem("todos", JSON.stringify(ci));
+}
 
 //Page load 
 cityLoop();
