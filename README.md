@@ -18,8 +18,8 @@ AirBender is a website that was created to provide a modern day solution of givi
 - HTML
 - CSS
 - JavaScript
-- Bootstrap - https://getbootstrap.com/
-- Moment JS - https://momentjs.com/ 
+- Bootstrap
+- Moment JS
 
 ## Requirements
 
