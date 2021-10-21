@@ -1,8 +1,9 @@
 var searchBtn = $("#search-btn");
 var flightNum = $("#flight-search");
 var city = $("#city-search");
-var localStorageGrab = JSON.parse(localStorage.getItem("Destination")) || [];
+var localStorageGrab = JSON.parse(localStorage.getItem(city.val())) || [];
 console.log("LS array", localStorageGrab);
+
 // Flight function
 function getFlightMap(event){
     event.preventDefault()
@@ -97,13 +98,7 @@ function getForecast(event){
         })
         cityLoop();
 };
-// Is this function [below] necessary if it is calling a function already defined?
-// Why not call function w/in a larger function?
 
-
-// function addStorage(event) {
-//     // event.preventDefault();
-// };
 
 searchBtn.on("click", getFlightMap);
 searchBtn.on("click", getForecast);
@@ -135,7 +130,7 @@ function cityLoop() {
         var arrElement = localStorageGrab[i];
         console.log("City is ", arrElement);
     }
-    
+    localStorage.setItem("city", city.val());
 }
 
 
