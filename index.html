@@ -32,8 +32,15 @@
               <a class="nav-link" href="#">Forecast</a>
             </li>
             <li class="nav-item dropdown">
-
-              <a class="nav-link dropdown-toggle" type="button" href="#">City History</a>
+              <div class="dropdown">
+                <a class="nav-link dropdown-toggle" type="button" href="#" id="dropdownMenu2" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">City History</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <button class="dropdown-item" type="button">Action</button>
+                  <button class="dropdown-item" type="button">Another action</button>
+                  <button class="dropdown-item" type="button">Something else here</button>
+                </div>
+              </div>
             </li>
           </ul>
           <!-- Functionality has been tested and verified 2336 EST -->
@@ -45,7 +52,7 @@
             <button class="btn btn-outline-info my-2 my-sm-0" type="submit" id="search-btn"
               value="Search">Search</button>
           </form>
-          
+
         </div>
       </nav>
 
@@ -91,66 +98,67 @@
     </div> -->
   </section>
   <section class="container">
-    <div class="container col-8 map-container">
-      <!-- Added inline styling to remove bootstrap css (100 pts = id, 10 pts = pseudo-class, 1 pt for pseudo-elements, 1000 pts for inline) -->
-      <div class="jumbotron" id="jumbo-tron" style="justify-content: center; 
+    <article class="jumbotron-art-defined">
+      <div class="container col-8 map-container">
+        <!-- Added inline styling to remove bootstrap css (100 pts = id, 10 pts = pseudo-class, 1 pt for pseudo-elements, 1000 pts for inline) -->
+        <div class="jumbotron" id="jumbo-tron" style="justify-content: center; 
       padding: inherit;
       background-color: transparent ;">
-        <img id="image" class="img-fluid">
+          <img id="image" class="img-fluid">
+        </div>
       </div>
-    </div>
-
+    </article>
     <br>
-
-    <div class="forecast-container">
-      <div class="row">
-        <div class="card-forecast" style="width: 13rem;">
-          <div class="card-body">
-            <p id="date1"></p>
-            <p id="icon1"></p>
-            <p id="temp1"></p>
-            <p id="wind1"></p>
-            <p id="humidity1"></p>
+    <article class="five-day-cards">
+      <div class="forecast-container">
+        <div class="row">
+          <div class="card-forecast" style="width: 13rem;">
+            <div class="card-body">
+              <p id="date1"></p>
+              <p id="icon1"></p>
+              <p id="temp1"></p>
+              <p id="wind1"></p>
+              <p id="humidity1"></p>
+            </div>
+          </div>
+          <div class="card-forecast" style="width: 13rem;">
+            <div class="card-body">
+              <p id="date2"></p>
+              <p id="icon2"></p>
+              <p id="temp2"></p>
+              <p id="wind2"></p>
+              <p id="humidity2"></p>
+            </div>
+          </div>
+          <div class="card-forecast" style="width: 13rem;">
+            <div class="card-body">
+              <p id="date3"></p>
+              <p id="icon3"></p>
+              <p id="temp3"></p>
+              <p id="wind3"></p>
+              <p id="humidity3"></p>
+            </div>
+          </div>
+          <div class="card-forecast" style="width: 13rem;">
+            <div class="card-body">
+              <p id="date4"></p>
+              <p id="icon4"></p>
+              <p id="temp4"></p>
+              <p id="wind4"></p>
+              <p id="humidity4"></p>
+            </div>
+          </div>
+          <div class="card-forecast" style="width: 13rem;">
+            <div class="card-body">
+              <p id="date5"></p>
+              <p id="icon5"></p>
+              <p id="temp5"></p>
+              <p id="wind5"></p>
+              <p id="humidity5"></p>
+            </div>
           </div>
         </div>
-        <div class="card-forecast" style="width: 13rem;">
-          <div class="card-body">
-            <p id="date2"></p>
-            <p id="icon2"></p>
-            <p id="temp2"></p>
-            <p id="wind2"></p>
-            <p id="humidity2"></p>
-          </div>
-        </div>
-        <div class="card-forecast" style="width: 13rem;">
-          <div class="card-body">
-            <p id="date3"></p>
-            <p id="icon3"></p>
-            <p id="temp3"></p>
-            <p id="wind3"></p>
-            <p id="humidity3"></p>
-          </div>
-        </div>
-        <div class="card-forecast" style="width: 13rem;">
-          <div class="card-body">
-            <p id="date4"></p>
-            <p id="icon4"></p>
-            <p id="temp4"></p>
-            <p id="wind4"></p>
-            <p id="humidity4"></p>
-          </div>
-        </div>
-        <div class="card-forecast" style="width: 13rem;">
-          <div class="card-body">
-            <p id="date5"></p>
-            <p id="icon5"></p>
-            <p id="temp5"></p>
-            <p id="wind5"></p>
-            <p id="humidity5"></p>
-          </div>
-        </div>
-      </div>
-
+    </article>
 
   </section>
 

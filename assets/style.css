@@ -26,6 +26,11 @@ body {
   -webkit-box-shadow: 0 0 1.5rem rgb(73, 71, 71);
   box-shadow: 0 0 1.5rem rgb(22, 18, 18);
  }
+/* May use this one 0224 EST */
+ /* .card-forecast {
+   background-color: rgb(31, 30, 30);
+   color: whitesmoke;
+ } */
 
 /* Not necessary ATM 2328 EST */
 /* .jumbotron {
