@@ -34,3 +34,7 @@ of my loved one to make sure everything is ideal.
 
 ## Presentation
 View the presentation at - https://docs.google.com/presentation/d/1BBBgHILs1aGO87UgdEvFL-wwPUfApYbHLHZJXlF3W-o/edit?usp=sharing
+
+Sources:
+
+Image: (https://www.freepik.com/free-vector/aeroplanes-pattern-background_837988.htm)
