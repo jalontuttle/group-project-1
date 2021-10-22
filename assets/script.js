@@ -95,6 +95,8 @@ function getForecast(event){
         temp5.text("Temperature: " + data.list[4].main.temp);
         wind5.text("Wind: " + data.list[4].wind.speed);
         humidity5.text("Humidity: " + data.list[4].main.humidity);
+
+        $(".card-forecast").css({"background-color": "black", "color": "white", "font-size": "100%", "border-radius": "1rem;"});
         
         })
 };
