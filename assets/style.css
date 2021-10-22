@@ -27,7 +27,20 @@ body {
    color: whitesmoke;
  } */
 
- 
-
+ .footerWrap {
+   width:100%;
+   position:fixed;
+   bottom: 0px;
+ }
+ .footer {
+   width:400px;
+   margin:auto;
+ }
+ .footerContent {
+   float:center;
+   width:100%;
+   padding:20px 0;
+ }
+ .footer p {float:left; width:100%; text-align:center; }
 
 
