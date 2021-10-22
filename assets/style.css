@@ -7,12 +7,6 @@ body {
   
 }
 
-/* .jumbotron {
-  justify-content: center;
-  border-radius: 1rem; 
-  padding: inherit;
-
-} */
 /* Adds a nice effect to the map image 0111 EST */
 #image {
   border-radius: 1rem;
@@ -26,75 +20,14 @@ body {
   -webkit-box-shadow: 0 0 1.5rem rgb(73, 71, 71);
   box-shadow: 0 0 1.5rem rgb(22, 18, 18);
  }
+
 /* May use this one 0224 EST */
  /* .card-forecast {
    background-color: rgb(31, 30, 30);
    color: whitesmoke;
  } */
 
-/* Not necessary ATM 2328 EST */
-/* .jumbotron {
-  background-image: url(https://jooinn.com/images/blue-sky-with-clouds-8.jpg);
-  text-align: center;
-  border-radius: 0;
-  border-bottom: 4px solid grey
-} */
+ 
 
-/* .lead {
-  font-family: 'DM Serif Display', serif;
- } */
 
-/* .jumbotron:hover {
-  background-image: url(https://wallpapers-hd-wide.com/wp-content/uploads/2016/01/Large_passenger_airplane_flying_in_the_sky-1920x1080.jpg);
-  height: auto;
-  width: auto;
-} */
-/* May not be nessary ATM 2341 EST *
-/* Long Search Bar (Frequently Searched Cities) */
-/* .navbar-expand-lg {
-  border-radius: 10px;
-  border-color: #a3cefb;
-  border: 5px;
-} */
-/* May not be nessary ATM 2329 EST */
-/* .list-group {
-  position: absolute;
-  left: 0px;
-  margin-left: 10px;
-} */
-
-/* .list-group-item.active {
-  z-index: 2;
-  color: #fff;
-  background-color: #46afff;
-  border-color: #a3cefb;
-} */
-/* All of these also may not be necessary. 2354 EST */
-/* .map-container{
-  position: absolute;
-  left: 500px;
-}
-
-.forecast-container{
-  position: relative;
-  top: 500px;
-}
-
-.card-forecast{
-  margin-right: 10px;
-}
-
-.row{
-justify-content: space-evenly;
-}
-
-.jumbotron {
-  justify-content: center;
-  border-radius: 1rem; 
-}
-
-/* Caused the input/search elements to be on conflicting "lines". */
-/* #search-btn, #flight-search{
-  margin-top: .35rem;
-} */
 

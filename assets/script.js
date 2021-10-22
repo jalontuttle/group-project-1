@@ -1,7 +1,7 @@
 var searchBtn = $("#search-btn");
 var flightNum = $("#flight-search");
 var city = $("#city-search");
-var cityBtn = $("#cities-buttons")
+var cityBtn = $(".dropdown-menu")
 var cityArray = [];
 
 // Flight function
@@ -25,7 +25,7 @@ function getFlightMap(event){
 function getForecast(event){
     event.preventDefault();
     var urlForecast = "https://api.openweathermap.org/data/2.5/forecast?q=" + city.val() + "&appid=0fca51a84b3c432b1ebeba8243768907&units=imperial";
-
+    console.log(urlForecast)
     fetch(urlForecast).then(response =>{
         console.log(response);
         return response.json();
@@ -95,6 +95,7 @@ function getForecast(event){
         temp5.text("Temperature: " + data.list[4].main.temp);
         wind5.text("Wind: " + data.list[4].wind.speed);
         humidity5.text("Humidity: " + data.list[4].main.humidity);
+        
         })
 };
 
@@ -104,7 +105,7 @@ searchBtn.on("click", getForecast);
 
 //Set local storage
 function renderCities(){
-    cityBtn.innerhtml = "";
+    cityBtn.innerHTML = "";
     
     for(var i = 0; i < cityArray.length; i++){
         var btn = cityArray[i];
@@ -122,6 +123,7 @@ function init(){
 
     if(storedCities !== null){
         cityArray = storedCities
+    
     }
 
     renderCities();
@@ -146,4 +148,3 @@ searchBtn.on("click", function(event){
 })
 
 init();
-   
